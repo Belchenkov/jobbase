@@ -11,6 +11,26 @@ use yii\web\Controller;
 
 class CategoryController extends \yii\web\Controller
 {
+    /**
+     * Access Control
+
+    public function behaviors()
+    {
+        return [
+            'access' => [
+                'class' => AccessControl::className(),
+                'only' => ['create'],
+                'rules' => [
+                    [
+                        'actions' => ['creare'],
+                        'allow' => true,
+                        'roles' => ['@'],
+                    ],
+                ],
+            ]
+        ];
+    }
+     */
     public function actionIndex()
     {
         //Create Query
@@ -43,7 +63,7 @@ class CategoryController extends \yii\web\Controller
                 //Save Record
                 $category->save();
                 // Send Message
-                Yii::$app->getSession()->setFlash('success', 'Category Added');
+                Yii::$app->getSession()->setFlash('success', 'Категория добавлена');
 
                 return $this->redirect('index.php?r=category');
             }

@@ -4,7 +4,9 @@ use yii\widgets\LinkPager;
 ?>
 
 
-<h2 class="page-header">Categories<a href="/index.php?r=category/create" class="btn btn-primary pull-right">Create</a></h2>
+<h2 class="page-header">Вакансии по категориям
+    <a href="/index.php?r=category/create" class="btn btn-primary pull-right">Добавить категорию</a>
+</h2>
 
 <?php if(null !== Yii::$app->session->getFlash('success')) : ?>
     <div class="alert alert-success"><?php echo Yii::$app->session->getFlash('success'); ?></div>

@@ -8,14 +8,14 @@ use yii\widgets\ActiveForm;
 /* @var $form ActiveForm */
 ?>
 <div class="category-create">
-    <h2 class="page-header">Add Category</h2>
+    <h2 class="page-header">Добавить категорию</h2>
     <?php $form = ActiveForm::begin(); ?>
 
-        <?= $form->field($category, 'name') ?>
+        <?= $form->field($category, 'name')->label('Название') ?>
 
         <div class="form-group">
-            <?= Html::submitButton('Submit', ['class' => 'btn btn-primary']) ?>
+            <?= Html::submitButton('Отправить', ['class' => 'btn btn-primary']) ?>
         </div>
     <?php ActiveForm::end(); ?>
 
-</div><!-- category-create -->
+</div>
